@@ -2,10 +2,10 @@
 ```
 [
     {
-        "UserName": "",
-        "Password": "",
-        "RefreshToken": "",
-        "RefreshTokenTime": "",                         # Get Token 
+        "UserName": "",                                 # Input Phone Number.
+        "Password": "",                                 # Input Password.
+        "RefreshToken": "",                             # Token, Not modify.
+        "RefreshTokenTime": "",                         # Log Token Time, Not modify.
         "SubPath": "/CTCloud",                          # Index Path 
         "RootPathId": "-11",                            # Default Root: -11
         "HideItemId": "Num01|Num02",                    # Allow Folder and File.
