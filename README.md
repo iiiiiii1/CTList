@@ -1,5 +1,5 @@
 # 配置文件
-#### 无特殊需要,只需要填写账号密码即可.
+#### 无特殊需要,只需要填写账号密码即可 (前4项). 
 #### `CaptchaMode` 可填写为 `"https://api.moeclub.org/SampleCode"` 用于识别登陆验证码. 默认: "0"。
 ```
 [
@@ -67,8 +67,7 @@ Usage of CTList:
 # 使用示例
 ```
 # 默认启动监听 127.0.0.1, 一般用于反代.
-# ./CTList -a "<TOKEN>"
+# ./CTList -a "<AUTH_TOKEN_32>"
 # 直接监听公网.
-# ./CTList -a "<TOKEN>" -bind 0.0.0.0 -port 80
-
+# ./CTList -a "<AUTH_TOKEN_32>" -bind 0.0.0.0 -port 80
 ```
