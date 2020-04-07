@@ -19,7 +19,8 @@
 ```
 
 # 准备工作
-#### `CTList`皮肤文件与`OneList`皮肤文件完全兼容 [点此前往下载](https://github.com/MoeClub/OneList/tree/master/Rewrite).
+#### `CTList`皮肤文件与`OneList`皮肤文件完全兼容.
+#### 可实现在线浏览图片,在线观看视频等其他功能 [点此前往下载](https://github.com/MoeClub/OneList/tree/master/Rewrite/@Theme)
 - 授权码
 - 主程序 (CTList)
 - 配置文件 (config.json)
