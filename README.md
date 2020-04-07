@@ -4,7 +4,7 @@
 ```
 [
     {
-        "Enable": 0,                                    # 0: Disable, 1: Enbale.
+        "Enable": 1,                                    # 0: Disable, 1: Enbale.
         "UserName": "",                                 # Input Phone Number.
         "Password": "",                                 # Input Password.
         "CaptchaMode": "0",                             # Captcha Mode. 0: Auto Reject, 1: Manual Input, other: API URL. 
