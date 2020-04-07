@@ -36,7 +36,7 @@
 
 # 刷新策略
 ```
-Token(保活): 60 * 60 * 24 * 1
+Token(保活): 60 * 60 * 12
 Cookie(授权): 60 * 30
 URL(下载链接): 60 * 30 （配置文件可改 <RefreshURL>）
 Folder(刷新目录): 60 * 15  （配置文件可改, 全局最小值生效 <RefreshInterval>）
