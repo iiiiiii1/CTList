@@ -1,0 +1,26 @@
+[
+  {
+    "Enable": 1,
+    "UserName": "",
+    "Password": "",
+    "CaptchaMode": "https://api.moeclub.org/SampleCode",
+    "RefreshToken": "",
+    "SubPath": "/CTCloud00",
+    "RootPathId": "-11",
+    "HideItemId": "",
+    "RefreshURL": 198,
+    "RefreshInterval": 900
+  },
+  {
+    "Enable": 0,
+    "UserName": "",
+    "Password": "",
+    "CaptchaMode": "0",
+    "RefreshToken": "",
+    "SubPath": "/CTCloud01",
+    "RootPathId": "-11",
+    "HideItemId": "0|-16",
+    "RefreshURL": 256,
+    "RefreshInterval": 900
+  }
+]
