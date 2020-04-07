@@ -1,0 +1,14 @@
+[
+  {
+    "Enable": 0,
+    "UserName": "",
+    "Password": "",
+    "CaptchaMode": "0",
+    "RefreshToken": "",
+    "SubPath": "/CTCloud",
+    "RootPathId": "-11",
+    "HideItemId": "0",
+    "RefreshURL": 1800,
+    "RefreshInterval": 900
+  }
+]
