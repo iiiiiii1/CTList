@@ -18,6 +18,13 @@
 ]
 ```
 
+# 准备工作
+- 授权码
+- 主程序 (CTList)
+- 配置文件 (config.json)
+- 皮肤文件 (index.html)  # `CTList`皮肤文件与`OneList`皮肤文件完全兼容 ((点此前往下载)[https://github.com/MoeClub/OneList/tree/master/Rewrite]).
+
+
 # 刷新策略
 ```
 Token(保活): 60 * 60 * 24 * 1
@@ -59,7 +66,7 @@ Usage of CTList:
 ```
 # 默认启动监听 127.0.0.1, 一般用于反代.
 # ./CTList -a "<TOKEN>"
-# 
+# 直接监听公网.
 # ./CTList -a "<TOKEN>" -bind 0.0.0.0 -port 80
 
 ```
