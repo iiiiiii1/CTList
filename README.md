@@ -1,3 +1,10 @@
+# CTList介绍
+- 支持多账户
+- 支持每天自动签到
+- 支持异步缓存
+- 支持隐藏指定文件夹和文件
+- 支持自定义根目录
+
 # 配置文件
 #### 无特殊需要,只需要填写账号密码即可 (前4项). 
 #### `CaptchaMode` 可填写为 `"https://api.moeclub.org/SampleCode"` 用于识别登陆验证码. 默认: "0"。
@@ -9,11 +16,11 @@
         "Password": "",                                 # Input Password.
         "CaptchaMode": "0",                             # Captcha Mode. 0: Auto Reject, 1: Manual Input, other: API URL. 
         "RefreshToken": "",                             # Token. * Do Not Modify It.
-        "SubPath": "/CTCloud",                          # Index Path 
+        "SubPath": "/CTCloud",                          # Index Path. * Unique Per Account.
         "RootPathId": "-11",                            # Default Root: -11
         "HideItemId": "0|-16",                          # Allow Folder and File.
-        "RefreshURL": 1800,                             # Max: 1800; Allow Max: 2329
-        "RefreshInterval": 900,                         # Max: Null, Min Global Value
+        "RefreshURL": 200,                              # Min: 180, Max: 1800; Allow Max: 2329
+        "RefreshInterval": 900,                         # Max: Null, Min: 300
     }
 ]
 ```
