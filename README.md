@@ -11,7 +11,7 @@
         "RefreshToken": "",                             # Token, Not modify.
         "SubPath": "/CTCloud",                          # Index Path 
         "RootPathId": "-11",                            # Default Root: -11
-        "HideItemId": "0|-16",                    # Allow Folder and File.
+        "HideItemId": "0|-16",                          # Allow Folder and File.
         "RefreshURL": 1800,                             # Max: 1800; Allow Max: 2329
         "RefreshInterval": 900,                         # Max: Null, Min Global Value
     }
