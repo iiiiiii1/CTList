@@ -4,14 +4,14 @@
 ```
 [
     {
+        "Enable": 0,                                    # 0: Disable, 1: Enbale.
         "UserName": "",                                 # Input Phone Number.
         "Password": "",                                 # Input Password.
         "CaptchaMode": "0",                             # Captcha Mode. 0: Auto Reject, 1: Manual Input, other: API URL. 
         "RefreshToken": "",                             # Token, Not modify.
-        "RefreshTokenTime": "",                         # Log Token Time, Not modify.
         "SubPath": "/CTCloud",                          # Index Path 
         "RootPathId": "-11",                            # Default Root: -11
-        "HideItemId": "Num01|Num02",                    # Allow Folder and File.
+        "HideItemId": "0|-16",                    # Allow Folder and File.
         "RefreshURL": 1800,                             # Max: 1800; Allow Max: 2329
         "RefreshInterval": 900,                         # Max: Null, Min Global Value
     }
