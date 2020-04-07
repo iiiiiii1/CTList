@@ -20,7 +20,7 @@
 
 # 刷新策略
 ```
-Token(保活): 60 * 60 * 24 * 5
+Token(保活): 60 * 60 * 24 * 1
 Cookie(授权): 60 * 30
 URL(下载链接): 60 * 30 （配置文件可改 <RefreshURL>）
 Folder(刷新目录): 60 * 15  （配置文件可改, 全局最小值生效 <RefreshInterval>）
@@ -36,4 +36,30 @@ Folder(刷新目录): 60 * 15  （配置文件可改, 全局最小值生效 <Ref
 # 方式: POST
 # 参数: Base64=<IMAGE_BASE64_CODE>&Type=CTCloud
 # 返回: 状态码:200, 显示识别结果. 状态码:404, 识别错误或结果不符合预设规则, 显示为空.
+```
+
+# 使用说明
+```
+Usage of CTList:
+  -bind string
+        Bind Address (default "127.0.0.1")
+  -port string
+        Port (default "5189")
+  -a string
+        Auth Token.
+  -c string
+        Config file. (default "config.json")
+  -t string
+        Index file. (default "index.html")
+  -json
+        Output json.
+```
+
+# 使用示例
+```
+# 默认启动监听 127.0.0.1, 一般用于反代.
+# ./CTList -a "<TOKEN>"
+# 
+# ./CTList -a "<TOKEN>" -bind 0.0.0.0 -port 80
+
 ```
