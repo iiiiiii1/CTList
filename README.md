@@ -8,7 +8,7 @@
         "UserName": "",                                 # Input Phone Number.
         "Password": "",                                 # Input Password.
         "CaptchaMode": "0",                             # Captcha Mode. 0: Auto Reject, 1: Manual Input, other: API URL. 
-        "RefreshToken": "",                             # Token, Not modify.
+        "RefreshToken": "",                             # Token. * Do Not Modify It.
         "SubPath": "/CTCloud",                          # Index Path 
         "RootPathId": "-11",                            # Default Root: -11
         "HideItemId": "0|-16",                          # Allow Folder and File.
