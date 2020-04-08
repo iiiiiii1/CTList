@@ -37,7 +37,7 @@
 - 皮肤文件 (index.html)
 
 # 加密写法
-#### `AuthItemId` 配置项采用 HTTP 401 认证方式加密
+#### `AuthItemId` 配置项 采用 HTTP 401 认证方式加密
 ```
 # 单个写法
 "AuthItemId": "-11?0?UserName:Password"
@@ -101,11 +101,24 @@ Usage of CTList:
 # ./CTList -a "<AUTH_TOKEN_32>" -bind 0.0.0.0 -port 80
 ```
 
+# 目录访问
+#### `SubPath` 配置项 控制目录访问 
+```
+# 多账户时,确保 SubPath 项唯一.
+
+当 SubPath 配置为空("")或者为单斜杆("/")时
+访问路径为 http://0.0.0.0
+
+当 SubPath 配置为具体字段("/CTList")时, "/CTList" 可以修改成自己喜欢的字段.
+访问路径为 http://0.0.0.0/CTList
+
+```
+
 # 反向代理
 ```
     location ^~ /onedrive/ {
         proxy_set_header X-Real-IP $remote_addr;
-        proxy_pass http://127.0.0.1:5288;
+        proxy_pass http://127.0.0.1:5189;
     }
 ```
 
