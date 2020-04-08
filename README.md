@@ -23,7 +23,7 @@
         "HideItemId": "0|-16",                          # Allow Folder and File.
         "AuthItemId": "",                               # HTTP 401.
         "RefreshURL": 189,                              # Min: 180, Max: 1800; Allow Max: 2329
-        "RefreshInterval": 900,                         # Max: Null, Min: 300
+        "RefreshInterval": 1800                         # Max: Null, Min: 300
     }
 ]
 ```
