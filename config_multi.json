@@ -5,9 +5,10 @@
     "Password": "",
     "CaptchaMode": "https://api.moeclub.org/SampleCode",
     "RefreshToken": "",
-    "SubPath": "/CTCloud00",
+    "SubPath": "/CTList00",
     "RootPathId": "-11",
     "HideItemId": "",
+    "AuthItemId": "",
     "RefreshURL": 198,
     "RefreshInterval": 900
   },
@@ -17,9 +18,10 @@
     "Password": "",
     "CaptchaMode": "0",
     "RefreshToken": "",
-    "SubPath": "/CTCloud01",
+    "SubPath": "/CTList01",
     "RootPathId": "-11",
     "HideItemId": "0|-16",
+    "AuthItemId": "",
     "RefreshURL": 256,
     "RefreshInterval": 900
   }
