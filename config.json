@@ -8,6 +8,7 @@
     "SubPath": "/CTList",
     "RootPathId": "-11",
     "HideItemId": "0",
+    "AuthItemId": "",
     "RefreshURL": 198,
     "RefreshInterval": 900
   }
