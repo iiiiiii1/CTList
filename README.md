@@ -71,18 +71,6 @@ URL(下载链接): 189 （配置文件可改 <RefreshURL>）
 Folder(刷新目录): 60 * 15  （配置文件可改, 全局最小值生效 <RefreshInterval>）
 ```
 
-# 天翼云网盘登陆验证码识别API(基于开源OCR识别)
-```
-# 目前去噪算法只支持天翼云网盘登陆的验证码(其他类型根本识别不出来)
-# 使用时可多次尝试下载不同的验证图片进行提交(目前准确率不算高,但可用.)
-# 下载天翼云验证码需要添加请求头 "Referer: https://open.e.189.cn/"
-
-# 接口: https://api.moeclub.org/SampleCode
-# 方式: POST
-# 参数: Base64=<IMAGE_BASE64_CODE>&Type=CTCloud
-# 返回: 状态码:200, 显示识别结果. 状态码:404, 识别错误或结果不符合预设规则, 显示为空.
-```
-
 # 使用说明
 ```
 Usage of CTList:
@@ -139,4 +127,16 @@ nohup /path/to/CTList -a "<AUTH_TOKEN_32>" -bind 0.0.0.0 -port 80 >/dev/null 2>&
 编辑 /etc/crontab 文件, 并添加下面一行并多按几个回车. (有些系统不留空行会出现意外)
 @reboot nohup /path/to/CTList -a "<AUTH_TOKEN_32>" -bind 0.0.0.0 -port 80 >/dev/null 2>&1 &
 
+```
+
+# 天翼云网盘登陆验证码识别API(基于开源OCR识别)
+```
+# 目前去噪算法只支持天翼云网盘登陆的验证码(其他类型根本识别不出来)
+# 使用时可多次尝试下载不同的验证图片进行提交(目前准确率不算高,但可用.)
+# 下载天翼云验证码需要添加请求头 "Referer: https://open.e.189.cn/"
+
+# 接口: https://api.moeclub.org/SampleCode
+# 方式: POST
+# 参数: Base64=<IMAGE_BASE64_CODE>&Type=CTCloud
+# 返回: 状态码:200, 显示识别结果. 状态码:404, 识别错误或结果不符合预设规则, 显示为空.
 ```
