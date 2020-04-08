@@ -1,8 +1,10 @@
 # CTList介绍
 - 支持多账户
+- 支持显示文件夹大小
 - 支持每天自动签到
 - 支持异步缓存
 - 支持隐藏指定文件夹和文件
+- 支持整个目录,单层目录或单文件访问加密
 - 支持自定义根目录
 
 # 配置文件
@@ -16,10 +18,11 @@
         "Password": "",                                 # Input Password.
         "CaptchaMode": "0",                             # Captcha Mode. 0: Auto Reject, 1: Manual Input, other: API URL. 
         "RefreshToken": "",                             # Token. * Do Not Modify It.
-        "SubPath": "/CTCloud",                          # Index Path. * Unique Per Account.
+        "SubPath": "/CTList",                           # Index Path. * Unique Per Account.
         "RootPathId": "-11",                            # Default Root: -11
         "HideItemId": "0|-16",                          # Allow Folder and File.
-        "RefreshURL": 200,                              # Min: 180, Max: 1800; Allow Max: 2329
+        "AuthItemId": "",                               # HTTP 401.
+        "RefreshURL": 189,                              # Min: 180, Max: 1800; Allow Max: 2329
         "RefreshInterval": 900,                         # Max: Null, Min: 300
     }
 ]
@@ -27,12 +30,31 @@
 
 # 准备工作
 #### `CTList`皮肤文件与`OneList`皮肤文件完全兼容.
-#### 可实现在线浏览图片,在线观看视频等其他功能 [点此前往下载](https://github.com/MoeClub/OneList/tree/master/Rewrite/@Theme)
+#### 可实现在线浏览图片,在线观看视频等其他功能 [点此前往下载](https://github.com/MoeClub/OneList/tree/master/Rewrite/@Theme/HaorWu)
 - 授权码
 - 主程序 (CTList)
 - 配置文件 (config.json)
 - 皮肤文件 (index.html)
 
+# 加密写法
+#### `AuthItemId` 配置项采用 HTTP 401 认证方式加密
+```
+# 单个写法
+"AuthItemId": "-11?0?UserName:Password"
+# 多个写法
+"AuthItemId": "-11?0?UserName:Password|-16?1?UserName:Password"
+
+# 字段解析
+<文件或者目录的ID>?<加密模式>?<用户名>:<密码>
+
+# 文件或目录的ID
+登陆 https://cloud.189.cn ;进入需要操作的目录,查看地址栏最后的数字就是这个目录的ID.
+
+# 加密模式
+0: 只加密这一层文件夹,可以直接访问这层文件夹内部的内容.
+1: 加密这个文件夹的所有子项目.
+注意: 加密文件选0和1效果一样.
+```
 
 # 刷新策略
 ```
@@ -77,4 +99,24 @@ Usage of CTList:
 # ./CTList -a "<AUTH_TOKEN_32>"
 # 直接监听公网.
 # ./CTList -a "<AUTH_TOKEN_32>" -bind 0.0.0.0 -port 80
+```
+
+# 反向代理
+```
+    location ^~ /onedrive/ {
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_pass http://127.0.0.1:5288;
+    }
+```
+
+# 后台运行及开机自启
+```
+# /path/to/CTList 为CTList的完整路径
+# 后台运行
+nohup /path/to/CTList -a "<AUTH_TOKEN_32>" -bind 0.0.0.0 -port 80 >/dev/null 2>&1 &
+
+# 开机自启并后台运行
+编辑 /etc/crontab 文件, 并添加下面一行并多按几个回车. (有些系统不留空行会出现意外)
+@reboot nohup /path/to/CTList -a "<AUTH_TOKEN_32>" -bind 0.0.0.0 -port 80 >/dev/null 2>&1 &
+
 ```
