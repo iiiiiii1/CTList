@@ -37,7 +37,7 @@
 - 皮肤文件 (index.html)
 
 # 寻找目录ID
-#### 用于 `RootPathId`, `HideItemId`, `AuthItemId`
+#### 用于 `RootPathId`, `HideItemId`, `AuthItemId` 配置项
 #### 登陆 https://cloud.189.cn ;进入需要操作的目录,查看地址栏最后的数字就是这个目录的ID.
 #### 文件ID需要浏览器F12查看请求项.
 ```
