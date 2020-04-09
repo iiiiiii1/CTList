@@ -31,10 +31,10 @@
 # 准备工作
 #### `CTList`皮肤文件与`OneList`皮肤文件完全兼容.
 #### 可实现在线浏览图片,在线观看视频等其他功能 [点此前往下载](https://github.com/MoeClub/OneList/tree/master/Rewrite/@Theme/HaorWu)
-- 授权码 [一个授权码可以绑定多个用户名,用于启动多账户.]
-- 主程序 (CTList)
-- 配置文件 (config.json)
-- 皮肤文件 (index.html)
+- **授权码** [一个授权码可以绑定多个用户名,用于启动多账户.]
+- **主程序** (CTList)
+- **配置文件** (config.json)
+- **皮肤文件** (index.html)
 
 # 寻找目录ID
 #### 用于 `RootPathId`, `HideItemId`, `AuthItemId` 配置项
