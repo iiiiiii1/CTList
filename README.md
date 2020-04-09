@@ -126,7 +126,7 @@ nohup /path/to/CTList -a "<AUTH_TOKEN_32>" -bind 0.0.0.0 -port 80 >/dev/null 2>&
 
 # 开机自启并后台运行
 编辑 /etc/crontab 文件, 并添加下面一行并多按几个回车. (有些系统不留空行会出现意外)
-@reboot nohup /path/to/CTList -a "<AUTH_TOKEN_32>" -bind 0.0.0.0 -port 80 >/dev/null 2>&1 &
+@reboot root sh -c '/path/to/CTList -a "<AUTH_TOKEN_32>" -bind 0.0.0.0 -port 80 >/dev/null 2>&1 &'
 
 ```
 
