@@ -31,7 +31,7 @@
 # 准备工作
 #### `CTList`皮肤文件与`OneList`皮肤文件完全兼容.
 #### 可实现在线浏览图片,在线观看视频等其他功能 [点此前往下载](https://github.com/MoeClub/OneList/tree/master/Rewrite/@Theme/HaorWu)
-- 授权码
+- 授权码 [一个授权码可以绑定多个用户名,用于启动多账户.]
 - 主程序 (CTList)
 - 配置文件 (config.json)
 - 皮肤文件 (index.html)
@@ -65,10 +65,11 @@ AuthItemId: 在展示目录中加密天翼网盘内的文件或文件夹,使用 
 
 # 刷新策略
 ```
-Token(保活): 60 * 60 * 12
-Cookie(授权): 60 * 30
-URL(下载链接): 189 （配置文件可改 <RefreshURL>）
-Folder(刷新目录): 60 * 15  （配置文件可改, 全局最小值生效 <RefreshInterval>）
+# 4个刷新逻辑完全异步,互不影响.
+Token(登陆保活): 60 * 60 * 12
+Cookie(会话授权): 60 * 30
+RefreshURL(真实下载链接): 189 （配置文件可改 <RefreshURL>）
+RefreshInterval(刷新目录结构): 60 * 15  （配置文件可改, 全局最小值生效 <RefreshInterval>）
 ```
 
 # 使用说明
