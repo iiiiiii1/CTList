@@ -26,7 +26,7 @@
                                                         ## 验证码. 0: 遇到验证码拒绝登陆, 1: 手动输入验证, 其他: 自动识别验证码的API.
                                                         
         "RefreshToken": "",                             # Token. * Do Not Modify It.
-                                                        ## 天翼网盘会话. 保持默认, 如果出现异常, 请将该值留空.
+                                                        ## 天翼网盘会话. 保持默认, 如果出现异常, 请将该值清空.
                                                         
         "SubPath": "/CTList",                           # Index Path. * Unique Per Account.
                                                         ## 指定某账户挂载在网站的某个目录, 多账户时每个目录值必须唯一.
