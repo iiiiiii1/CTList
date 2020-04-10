@@ -1,11 +1,11 @@
-# CTList介绍
+# CTList (Golang)
 - 支持多账户
 - 支持显示文件夹大小
 - 支持每天自动签到
 - 支持异步缓存
 - 支持隐藏指定文件夹和文件
 - 支持整个目录,单层目录或单文件访问加密
-- 支持自定义根目录
+- 支持展示任意目录,自定义根目录
 
 # 配置文件
 #### 无特殊需要,只需要填写账号密码即可 (前4项). 
@@ -66,7 +66,7 @@ AuthItemId: 在展示目录中加密天翼网盘内的文件或文件夹,使用 
 # 刷新策略
 ```
 # 4个刷新逻辑完全异步,互不影响.
-Token(登陆保活): 60 * 60 * 12
+Token(登陆保活): 60 * 60 * 10
 Cookie(会话授权): 60 * 30
 RefreshURL(真实下载链接): 189 （配置文件可改 <RefreshURL>）
 RefreshInterval(刷新目录结构): 60 * 15  （配置文件可改, 全局最小值生效 <RefreshInterval>）
@@ -126,7 +126,7 @@ nohup /path/to/CTList -a "<AUTH_TOKEN_32>" -bind 0.0.0.0 -port 80 >/dev/null 2>&
 
 # 开机自启并后台运行
 编辑 /etc/crontab 文件, 并添加下面一行并多按几个回车. (有些系统不留空行会出现意外)
-@reboot root sh -c '/path/to/CTList -a "<AUTH_TOKEN_32>" -bind 0.0.0.0 -port 80 >/dev/null 2>&1 &'
+@reboot root sh -c 'nohup /path/to/CTList -a "<AUTH_TOKEN_32>" -bind 0.0.0.0 -port 80 >/dev/null 2>&1 &'
 
 ```
 
