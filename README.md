@@ -140,8 +140,8 @@ Usage of CTList:
 ```
 
 # 后台运行及开机自启
+#### `/path/to/CTList` 为CTList的绝对路径
 ```
-# /path/to/CTList 为CTList的完整路径
 # 后台运行
 nohup /path/to/CTList -a "<AUTH_TOKEN_32>" -bind 0.0.0.0 -port 80 >/dev/null 2>&1 &
 
