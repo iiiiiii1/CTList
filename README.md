@@ -51,7 +51,7 @@
 
 # 准备工作
 #### `CTList`皮肤文件与`OneList`皮肤文件完全兼容.
-#### 可实现在线浏览图片,在线观看视频等其他功能 [点此前往下载](https://github.com/MoeClub/OneList/tree/master/Rewrite/@Theme/HaorWu)
+#### 可实现在线浏览图片,在线观看视频等其他功能 [点此前往下载](https://github.com/MoeClub/OneList/tree/master/Rewrite/@Theme)
 - **授权码** [32位小写字母和数字,一个授权码可以绑定多个用户名,用于启动多账户.] **[*[获取授权码](https://api.moeclub.org/CTListRegister/)*]**
 - **主程序** (CTList)
 - **配置文件** (config.json)
