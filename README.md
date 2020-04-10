@@ -78,10 +78,29 @@
 # 后台运行 (Windows操作系统无效)
 /path/to/CTList -a "<AUTH_TOKEN_32>" -bind 0.0.0.0 -port 80 -d
 
-# 开机自启并后台运行
+# 以下开机自启方式二选一, 推荐 SYSTEMD 方式.
+# 开机自启 (CRON)
 编辑 /etc/crontab 文件, 并在文件末尾多添加几个空行. (有些系统不留空行会出现不能自启动)
 @reboot root /path/to/CTList -a "<AUTH_TOKEN_32>" -bind 0.0.0.0 -port 80 -d
 
+# 开机自启 (SYSTEMD)
+cat > /etc/systemd/system/ctlist.service <<EOF
+[Unit]
+Description=ctlist
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/path/to/CTList -a "<AUTH_TOKEN_32>" -bind 0.0.0.0 -port 80 -l
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
+EOF
+# 设置服务为开机自启
+systemctl enable ctlist
+# 启动服务
+systemctl start ctlist
 ```
 
 # 寻找目录ID
