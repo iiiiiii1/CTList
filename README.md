@@ -57,6 +57,15 @@
 - **配置文件** (config.json)
 - **皮肤文件** (index.html)
 
+# 使用示例
+#### 将`CTList`, `config.json`, `index.html`三个文件放在同一目录下即可
+```
+# 默认启动监听 127.0.0.1, 一般用于反代或本地部署.
+# ./CTList -a "<AUTH_TOKEN_32>"
+# 直接监听公网.
+# ./CTList -a "<AUTH_TOKEN_32>" -bind 0.0.0.0 -port 80
+```
+
 # 寻找目录ID
 #### 用于 `RootPathId`, `HideItemId`, `AuthItemId` 配置项
 #### 登陆 https://cloud.189.cn ;进入需要操作的目录,查看地址栏最后的数字就是这个目录的ID.
@@ -108,14 +117,6 @@ Usage of CTList:
         Index file. (default "index.html")
   -json
         Output json.
-```
-
-# 使用示例
-```
-# 默认启动监听 127.0.0.1, 一般用于反代.
-# ./CTList -a "<AUTH_TOKEN_32>"
-# 直接监听公网.
-# ./CTList -a "<AUTH_TOKEN_32>" -bind 0.0.0.0 -port 80
 ```
 
 # 目录访问
