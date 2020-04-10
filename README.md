@@ -9,7 +9,7 @@
 
 # 配置文件
 #### 无特殊需要,只需要填写账号密码即可 (前4项). 修改配置后需重新启动 `CTList` .
-#### `CaptchaMode` 可填写为 `"https://api.moeclub.org/SampleCode"` 用于识别登陆验证码. 默认: "0"。
+#### `CaptchaMode` 填写为 `"https://api.moeclub.org/SampleCode"` 用于识别登陆验证码. 默认: "0"。
 ```
 [
     {
