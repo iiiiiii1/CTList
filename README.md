@@ -60,7 +60,7 @@
 # 使用示例
 #### 将`CTList`, `config.json`, `index.html`三个文件放在同一目录下即可
 ```
-# 默认启动监听 127.0.0.1, 一般用于反代或本地部署.
+# 默认启动监听 127.0.0.1:5189
 # ./CTList -a "<AUTH_TOKEN_32>"
 # 直接监听公网.
 # ./CTList -a "<AUTH_TOKEN_32>" -bind 0.0.0.0 -port 80
@@ -69,12 +69,18 @@
 # 后台运行及开机自启
 #### * `/path/to/CTList` 为CTList的绝对路径
 ```
-# 后台运行
-nohup /path/to/CTList -a "<AUTH_TOKEN_32>" -bind 0.0.0.0 -port 80 >/dev/null 2>&1 &
+# 直接运行
+/path/to/CTList -a "<AUTH_TOKEN_32>" -bind 0.0.0.0 -port 80
+
+# 不打印HTTP访问日志
+/path/to/CTList -a "<AUTH_TOKEN_32>" -bind 0.0.0.0 -port 80 -l
+
+# 后台运行 (Windows操作系统无效)
+/path/to/CTList -a "<AUTH_TOKEN_32>" -bind 0.0.0.0 -port 80 -d
 
 # 开机自启并后台运行
 编辑 /etc/crontab 文件, 并在文件末尾多添加几个空行. (有些系统不留空行会出现不能自启动)
-@reboot root /path/to/CTList -a "<AUTH_TOKEN_32>" -bind 0.0.0.0 -port 80 >/dev/null 2>&1 &
+@reboot root /path/to/CTList -a "<AUTH_TOKEN_32>" -bind 0.0.0.0 -port 80 -d
 
 ```
 
@@ -129,6 +135,10 @@ Usage of CTList:
         Index file. (default "index.html")
   -json
         Output json.
+  -d
+        Run in the background.
+  -l
+        Less output.
 ```
 
 # 目录访问
