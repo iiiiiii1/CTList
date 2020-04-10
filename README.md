@@ -66,6 +66,18 @@
 # ./CTList -a "<AUTH_TOKEN_32>" -bind 0.0.0.0 -port 80
 ```
 
+# 后台运行及开机自启
+#### * `/path/to/CTList` 为CTList的绝对路径
+```
+# 后台运行
+nohup /path/to/CTList -a "<AUTH_TOKEN_32>" -bind 0.0.0.0 -port 80 >/dev/null 2>&1 &
+
+# 开机自启并后台运行
+编辑 /etc/crontab 文件, 并添加下面一行并多按几个回车. (有些系统不留空行会出现意外)
+@reboot root sh -c 'nohup /path/to/CTList -a "<AUTH_TOKEN_32>" -bind 0.0.0.0 -port 80 >/dev/null 2>&1 &'
+
+```
+
 # 寻找目录ID
 #### 用于 `RootPathId`, `HideItemId`, `AuthItemId` 配置项
 #### 登陆 https://cloud.189.cn ;进入需要操作的目录,查看地址栏最后的数字就是这个目录的ID.
@@ -134,22 +146,10 @@ Usage of CTList:
 
 # 反向代理
 ```
-    location ^~ /onedrive/ {
+    location ^~ /CTList {
         proxy_set_header X-Real-IP $remote_addr;
         proxy_pass http://127.0.0.1:5189;
     }
-```
-
-# 后台运行及开机自启
-#### * `/path/to/CTList` 为CTList的绝对路径
-```
-# 后台运行
-nohup /path/to/CTList -a "<AUTH_TOKEN_32>" -bind 0.0.0.0 -port 80 >/dev/null 2>&1 &
-
-# 开机自启并后台运行
-编辑 /etc/crontab 文件, 并添加下面一行并多按几个回车. (有些系统不留空行会出现意外)
-@reboot root sh -c 'nohup /path/to/CTList -a "<AUTH_TOKEN_32>" -bind 0.0.0.0 -port 80 >/dev/null 2>&1 &'
-
 ```
 
 # 天翼云网盘登陆验证码识别API(基于开源OCR识别)
