@@ -66,6 +66,16 @@
 # ./CTList -a "<AUTH_TOKEN_32>" -bind 0.0.0.0 -port 80
 ```
 
+# 访问地址
+#### 根据配置文件中的`SubPath`项中参数访问具体网盘
+```
+例如: "SubPath": "/CTList"
+访问: http://127.0.0.1:5189/CTList
+
+例如: "SubPath": "/"
+访问: http://127.0.0.1:5189/
+```
+
 # 后台运行及开机自启
 #### * `/path/to/CTList` 为CTList的绝对路径
 ```
