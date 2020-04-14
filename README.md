@@ -18,10 +18,10 @@
                                                         ## 0: 关闭, 1: 打开
                                                         
         "UserName": "",                                 # Input Phone Number.
-                                                        ## 天翼云网盘登陆用户名.
+                                                        ## 天翼云网盘登陆用户名(不要带上'@189.cn').
                                                         
         "Password": "",                                 # Input Password.
-                                                        ## 天翼云网盘登陆密码
+                                                        ## 天翼云网盘登陆密码.
                                                         
         "CaptchaMode": "0",                             # Captcha Mode. 0: Auto Reject, 1: Manual Input, other: API URL. 
                                                         ## 验证码. 0: 遇到验证码拒绝登陆, 1: 手动输入验证, 其他: 自动识别验证码的API.
