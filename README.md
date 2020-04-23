@@ -25,7 +25,10 @@
                                                         
         "CaptchaMode": "0",                             # Captcha Mode. 0: Auto Reject, 1: Manual Input, other: API URL. 
                                                         ## 验证码. 0: 遇到验证码拒绝登陆, 1: 手动输入验证, 其他: 自动识别验证码的API.
-                                                        
+
+        "ViewMode": 0,                                  # View Mode. 0: Auto. 1: Only Web Page. 2: Only WebDAV.
+                                                        ## 显示模式. 0: 自动识别. 1: 只使用网页模式. 2:只使用WebDAV模式.                                   
+
         "RefreshToken": "",                             # Token. * Do Not Modify It.
                                                         ## 天翼网盘会话. 保持默认, 如果出现异常, 请将该值清空.
                                                         
