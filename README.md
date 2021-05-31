@@ -6,7 +6,7 @@
 - 支持隐藏指定文件夹和文件
 - 支持整个目录,单层目录或单文件访问加密
 - 支持展示任意目录,自定义根目录
-- 支持只读挂载到 `PotPlayer(WebDAV)`, `nPlayer(WebDAV)`
+- 支持只读挂载到 `PotPlayer(WebDAV)`, `nPlayer(WebDAV)`, `kodi(WebDAV)`
 
 # 配置文件
 #### 无特殊需要,只需要填写账号密码即可 (前4项). 修改配置后需重新启动 `CTList` .
