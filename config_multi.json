@@ -1,0 +1,30 @@
+[
+  {
+    "Enable": 1,
+    "UserName": "",
+    "Password": "",
+    "CaptchaMode": "https://api.moeclub.org/SampleCode",
+    "ViewMode": 0,
+    "RefreshToken": "",
+    "SubPath": "/CTList00",
+    "RootPathId": "-11",
+    "HideItemId": "",
+    "AuthItemId": "",
+    "RefreshURL": 198,
+    "RefreshInterval": 1800
+  },
+  {
+    "Enable": 0,
+    "UserName": "",
+    "Password": "",
+    "CaptchaMode": "0",
+    "ViewMode": 0,
+    "RefreshToken": "",
+    "SubPath": "/CTList01",
+    "RootPathId": "-11",
+    "HideItemId": "0|-16",
+    "AuthItemId": "",
+    "RefreshURL": 256,
+    "RefreshInterval": 2400
+  }
+]

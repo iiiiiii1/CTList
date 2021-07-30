@@ -1,0 +1,16 @@
+[
+  {
+    "Enable": 1,
+    "UserName": "",
+    "Password": "",
+    "CaptchaMode": "0",
+    "ViewMode": 0,
+    "RefreshToken": "",
+    "SubPath": "/CTList",
+    "RootPathId": "-11",
+    "HideItemId": "0",
+    "AuthItemId": "",
+    "RefreshURL": 198,
+    "RefreshInterval": 1800
+  }
+]
